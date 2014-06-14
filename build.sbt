@@ -51,4 +51,4 @@ EclipseKeys.withSource := true
 
 seq(Revolver.settings: _*)
 
-growl.GrowlingTests.growlSettings
+//growl.GrowlingTests.growlSettings
