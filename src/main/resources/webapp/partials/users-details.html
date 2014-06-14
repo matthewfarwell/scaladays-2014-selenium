@@ -1,0 +1,12 @@
+<div class="admin">
+  <h1 id="pageTitle">User</h1>
+  <table>
+    <tr ng-repeat="udf in userDetailsFields">
+      <td class="{{udf.labelclass}}" style="word-wrap: break-word; width: 5%; font-weight: bold;">{{udf.label}}</td>
+      <td class="{{udf.valueclass}}" style="word-wrap: break-word; width: 35%;" id="{{udf.id}}">{{udf.isDate? (udf.field | date:'yyyy-MM-dd HH:mm:ss') : udf.field}}</td>
+    </tr>
+  </table>
+  <p>
+    <br/><a href="#/users/{{user.id}}/edit" id="editUser">Edit</a> | <a href="#/users" id="usersList">Back to users list</a>
+  </p>
+</div>

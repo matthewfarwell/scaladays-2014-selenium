@@ -1,0 +1,23 @@
+<div class="admin">
+  <h1 id="pageTitle">Users</h1>
+  <br /> <a href="#/users/new" id="newUser">New user</a><br /> <br /> <input type="text" ng-model="searchText" placeholder="search" id="userSearch" autofocus="autofocus"><br />
+  <ng-include src="'partials/components/pagination.html'"></ng-include>
+  <table>
+    <tr>
+        <th ng-repeat="thf in tableHeaders" class="{{thf.class}} wrap" style="width: {{thf.width}};" id="{{thf.id}}">
+          <ng-include src="'partials/components/table-header.html'"></ng-include>
+        </th>
+    </tr>
+    <tr ng-repeat="entry in filtered = (users | filter:search | orderBy:orderByField:reverseSort) | startFrom:currentPage*pageSize | limitTo:pageSize"
+      ng-class="{even: $even, odd: $odd}" ng-dblclick="viewEntry(entry.id)">
+      <td class="noLeftBorder wrap" style="width: 15%;" id="userUsername_{{entry.id}}">{{entry.username}}</td>
+      <td class="wrap" style="width: 35%;" id="userFullname_{{entry.id}}">{{entry.fullName}}</td>
+      <td class="wrap" style="width: 35%;" id="userRole_{{entry.id}}">{{entry.role}}</td>
+      <td class="noWrap" style="width: 5%;" id="userControls_{{entry.id}}">
+        <a href="#/users/{{entry.id}}" id="userView_{{entry.id}}"><img alt="View" src="images/info_button.gif"></a>
+        <a href="#/users/{{entry.id}}/edit" id="userEdit_{{entry.id}}"><img alt="Edit" src="images/edit_button.gif"></a> 
+        <a ng-click="removeUser(entry.id)" style="cursor: pointer;" ng-show="entry.username != 'admin'" id="userDelete_{{entry.id}}"><img alt="Delete" src="images/delete_button.gif"></a>
+      </td>
+    </tr>
+  </table>
+</div>

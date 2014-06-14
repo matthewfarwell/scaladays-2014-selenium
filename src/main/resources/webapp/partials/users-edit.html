@@ -1,0 +1,53 @@
+<div class="admin">
+  <form ng-submit="submit()" id="userEditForm" name="userEditForm">
+    <h1 id="pageTitle">{{pageTitle}}</h1>
+    <div class="formSection">
+      <div>
+        <input type="text" ng-model="form.id" size="5%" ng-required="!isNew" disabled="disabled" id="userId" name="userId">
+      </div>
+    </div>
+    <div class="formSection">
+      <div>
+        <label>Username</label>
+      </div>
+      <div>
+        <input type="text" ng-model="form.username" size="50%" required ng-disabled="disableUsername" id="userUsername" name="userUsername" autofocus="autofocus">
+      </div>
+    </div>
+    <div class="formSection">
+      <div>
+        <label>Full name</label>
+      </div>
+      <div>
+        <input type="text" ng-model="form.fullName" size="50%" required id="userFullname" name="userFullname">
+      </div>
+    </div>
+    <div class="formSection">
+      <div>Role</div>
+      <select ng-model="form.role" ng-options="it.id as it.name for it in userRoles" id="userRole" name="userRole" required></select>
+    </div>
+    <div class="formSection">
+      <div>
+        <label>Password</label>
+      </div>
+      <div>
+        <input type="password" ng-model="form.password" size="50%" ng-required="{{isPasswordRequired}}" id="userPassword" name="userPassword">
+      </div>
+    </div>
+    <div class="formSection">
+      <div>
+        <label>Password confirmation</label>
+      </div>
+      <div>
+        <input type="password" ng-model="form.confirmPassword" size="50%" ng-required="{{isPasswordRequired}}" confirm-pass="form.password" id="userConfirmPassword" name="userConfirmPassword">
+        <span class="field_error" id="errorUserConfirmPassword" ng-show="userEditForm.userConfirmPassword.$error.passwordsmatch">Passwords do not match</span>
+      </div>
+    </div>
+    <div class="formSection">
+      <input type="submit" id="submit" name="submit" value={{buttonText}} ng-disabled="userEditForm.$invalid || (userEditForm.$pristine && isNew)">
+    </div>
+  </form>
+  <p>
+    <br /> <span ng-show="{{!isNew}}"><a href="#/users/{{form.id}}" id="viewUser">View</a> |</span> <a href="#/users" id="usersList">Back to users list</a>
+  </p>
+</div>

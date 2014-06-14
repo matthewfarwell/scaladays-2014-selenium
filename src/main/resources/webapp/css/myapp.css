@@ -1,0 +1,429 @@
+* {
+	margin:0;
+	padding:0;
+}
+
+html, body {
+	font-family: Tahoma,Verdana,Arial,Helvetica,sans-serif;
+	font-size: small;
+	background: white url(../images/library_sidebar_faux_column.gif) repeat-y left;
+}
+
+a {
+	color: #3366bb;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+hr {
+	border: 0px;
+	color: #c0b9a7;
+	background-color: #c0b9a7;
+	height: 2px;
+}
+
+td.noWrap {
+	white-space: nowrap;
+}
+
+td.wrap {
+	word-wrap: break-word;
+}
+
+th.wrap {
+	word-wrap: break-word;
+}
+
+#header {
+	height: 80px;
+	background: #161E38 url(../images/library_header_bg.gif) repeat-x scroll left bottom;
+	color: white;
+}
+
+#header a {
+	color: white;
+	cursor: pointer; cursor: hand;
+	text-decoration: none;
+}
+
+#header a:hover {
+	text-decoration: underline;
+}
+
+#user_panel {
+	position: absolute;
+	right: 10px;
+	top: 35px;
+}
+
+#version_select {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	width: 120px;
+}
+
+.field_error {
+	color:#F00;
+}
+
+#error {
+	font-size: medium;
+	font-weight: bold;
+	text-align: left;
+	margin: 10px;
+	margin-left: 230px;
+	color: #fa7a7a;
+	border: 1px solid;
+	border-color: #fa7a7a;
+}
+
+#notice {
+	font-size: large;
+	font-weight: bold;
+	text-align: left;
+	margin: 10px;
+	margin-left: 230px;
+	color: #c0b9a7;
+    border: 1px solid;
+	border-color: #c0b9a7;
+}
+
+#wrap {
+	background: white url(../images/library_sidebar_faux_column.gif) repeat-y left;
+}
+
+#sidebar {
+	left:0px;
+	float: left;
+	width: 220px;
+	background: #dfe4e8;
+}
+
+#main {
+	margin-left: 220px;
+	padding: 10px;
+	background: white;
+}
+
+#logo {
+	margin: 8px;
+}
+
+#footer {
+	padding: 4em;
+	text-align: center;
+	clear: both;
+	font-size: x-small;
+}
+
+#search_form {
+	width: 200px;
+	padding: 10px;
+}
+
+#search_form #field {
+	width: 130px;
+}
+
+#search_form #button {
+	width: 60px;
+}
+
+.menu_section {
+	padding: 5px 10px;
+	margin-bottom: 10px;
+	overflow: auto;
+}
+
+.menu_section a {
+	color: #4466aa;
+	text-decoration: none;
+}
+
+.menu_section a:hover {
+	text-decoration: underline;
+}
+
+.menu_section ul {
+	padding-left: 10px;
+	list-style-type:none;
+}
+
+.menu_section li {
+	margin: 2px 0px;
+}
+
+.menu_section .title {
+	font-size: large;
+	font-weight: bold;
+	color: #aaaaaa;
+	margin-bottom: 5px;
+}
+
+#login_form .form_title {
+	font-size: large;
+	font-weight: bold;
+	margin-bottom: 5px;
+	color: #c0b9a7;
+}
+
+#login_form .form_item {
+	margin-bottom: 10px;
+}
+
+.item {
+	margin-bottom: 20px;
+	background: #f2f0ea;
+	padding: 10px;
+	overflow: auto;
+}
+
+.item .icon {
+	float: left;
+	margin-right: 10px;
+}
+
+.item .content {
+	margin-left: 50px;
+}
+
+.item .title {
+	font-weight: bold;
+	font-size: large;
+}
+
+.item .categories {
+	color: #aaaaaa;
+	margin-bottom: 10px;
+}
+
+.item .requirements {
+	font-size: x-small;
+}
+
+.item .description {
+	margin-bottom: 5px;
+	padding-bottom: 5px;
+	border-bottom: 1px dotted #c0b9a7;
+}
+
+.item .button {
+	float: left;
+	margin-top: 5px;
+}
+
+.item .details {
+	font-size: x-small;
+	text-align: right;
+	float: right;
+  color: #aaaaaa;	
+}
+
+#item_details {
+	background: #f2f0ea;
+	padding: 10px;
+}
+
+#item_details .title {
+	font-weight: bold;
+	font-size: large;
+	margin-bottom: 25px;
+}
+
+#item_details .icon {
+	float: left;
+	margin-right: 10px;
+	vertical-align: middle;
+}
+
+.fieldWithErrors label {
+  background-color: #ff8e8e;
+}
+
+
+#errorExplanation {
+  width: 400px;
+  border: 2px solid #ff8e8e;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  background-color: #f0f0f0;
+}
+
+#errorExplanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  background-color: #ff8e8e;
+  color: #fff;
+}
+
+#errorExplanation p {
+  color: #333;
+  margin-bottom: 0;
+  padding: 5px;
+}
+
+#errorExplanation ul li {
+  font-size: 12px;
+  list-style: disc;
+  margin-left: 20px;
+}
+
+.admin table {
+	margin-top: 20px;
+	border-collapse: collapse;
+	border-spacing: 0px;
+}
+
+.admin table img {
+	border: 0px;
+	padding: 0px 3px;
+}
+
+.admin tr.odd {
+	background: #eff5f9;
+}
+
+.admin tr.odd:hover {
+	background: #C0C2C4;
+}
+
+.admin tr.even:hover {
+	background: #C0C2C4;
+}
+
+.admin td {
+	border-left: 1px solid #d5d5d5;
+	padding: 5px 10px;
+}
+
+.admin th {
+	border-left: 1px solid #d5d5d5;
+	border-bottom: 1px solid #d5d5d5;
+	padding: 5px;
+}
+
+.admin .noLeftBorder {
+	border-left: 0px;
+}
+
+.admin .borderBottom {
+	border-bottom: 1px solid #d5d5d5;
+}
+
+.admin .allBorders {
+	border: 1px solid #d5d5d5;
+}
+
+.admin .formSection {
+	margin: 10px 0px;
+}
+
+.jmx table {
+    margin-top: 0px;
+    border-collapse: collapse;
+    border-spacing: 0px;
+}
+
+.jmx tr.odd {
+    background: #eff5f9;
+}
+
+.jmx td {
+    padding: 1px;
+}
+
+.jmx th {
+    padding: 1px;
+}
+
+.jmx .allBorders {
+    border: 1px solid #d5d5d5;
+}
+
+.fullWidth {
+	width: 100%;
+}
+
+.homepage_box {
+	width: 46%;
+
+	float: left;
+	margin: 20px 1% 0px 1%;
+}
+
+.homepage_box .caption {
+	font-weight: bold;
+	font-size: large;
+	color: #c0b9a7;
+}
+
+.homepage_box .homepage_box_content {
+	background: #f2f0ea;
+	padding: 10px;
+	margin-bottom: 20px;
+}
+
+.homepage_box .homepage_box_content .caption {
+	font-size: medium;
+}
+
+.homepage_box h1 {
+	font-size: x-large;
+	margin-bottom: 20px;
+}
+
+.homepage_box p {
+	margin-bottom: 10px;
+	text-align: justify;
+}
+
+#results_summary {
+	margin-bottom: 5px;
+	text-align: right;
+}
+
+#results_summary select {
+	width: 130px;
+}
+
+/* FORM VALIDATION */
+
+/* Show blue border when input is in focus */
+input:focus {
+  border-color: rgba(82, 168, 236, 0.8) !important;
+}
+
+textarea:focus {
+  border-color: rgba(82, 168, 236, 0.8) !important;
+}
+
+select:focus {
+  border-color: rgba(82, 168, 236, 0.8) !important;
+}
+
+/* Green border when field has been typed in, and its valid */
+.formSection .ng-dirty.ng-valid {
+  border-color:#3a7d34;
+}
+
+/* Green border when field has not been typed in, and its valid */
+.formSection .ng-pristine.ng-valid {
+  border-color:#3a7d34;
+}
+
+/* Red border when field has been typed in, but its invalid */
+.formSection .ng-dirty.ng-invalid {
+  border-color:#ec3f41;
+}
+
+/* Red border when field has not been typed in, but its invalid */
+.formSection .ng-pristine.ng-invalid {
+  border-color:#ec3f41;
+}

@@ -1,0 +1,6 @@
+<a ng-click="setOrderByField(thf.field); reverseReverseSort()" style="cursor: pointer;" ng-show="thf.sortable" id="{{thf.id}}Anchor">
+  {{thf.text}}
+  <span ng-show="!reverseSort && orderByField == '{{thf.field}}'">&uarr;</span>
+  <span ng-show="reverseSort && orderByField == '{{thf.field}}'">&darr;</span>
+</a>
+<div ng-show="!thf.sortable" id="{{thf.id}}Text">{{thf.text}}</div>

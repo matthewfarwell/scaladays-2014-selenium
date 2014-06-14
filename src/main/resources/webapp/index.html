@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+<head>
+<script src="angularjs/angular.min.js"></script>
+<script src="angularjs/angular-route.min.js"></script>
+<script src="angularjs/angular-sanitize.js"></script>
+<script src="controllers/myapp.js"></script>
+<script src="controllers/users.js"></script>
+<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+<link rel="stylesheet" type="text/css" href="css/myapp.css" />
+
+<title>My application</title>
+</head>
+<body>
+  <div id="wrap" ng-click="hideNotifications()">
+    <div id="sidebar">
+      <div class="menu_section" id="navigationMenu">
+        <div class="title">Menu</div>
+        <ul>
+          <li><a href="#/users" id="navToUsers">Users</a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="error" ng-show="error" ng-bind-html="error"></div>
+    <div id="notice" ng-show="notice" ng-bind-html="notice"></div>
+    <div id="main">
+      <div ng-view></div>
+    </div>
+  </div>
+</body>
+</html>

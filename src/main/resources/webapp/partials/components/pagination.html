@@ -1,0 +1,15 @@
+<div align="center">
+  <button ng-disabled="$parent.currentPage == 0" ng-click="setCurrentPage(0)" id="navFirstPage">&nbsp;&lt;&lt;&nbsp;</button>
+  <button ng-disabled="$parent.currentPage == 0" ng-click="setCurrentPage($parent.currentPage-1)" id="navPrevPage">&nbsp;&lt;&nbsp;</button>
+  <select ng-model="$parent.currentPageSelector" ng-options="cp for cp in $parent.currentPageSelectorArray" ng-click="setCurrentPage($parent.currentPageSelector-1)" id="navSelectPage"></select>/{{Math.ceil($parent.filtered.length/$parent.pageSize)}}
+  (total of {{$parent.filtered.length}} entries)
+  <button ng-disabled="$parent.currentPage > $parent.filtered.length/$parent.pageSize - 1" ng-click="setCurrentPage($parent.currentPage+1)" id="navNextPage">&nbsp;&gt;&nbsp;</button>
+  <button ng-disabled="$parent.currentPage > $parent.filtered.length/$parent.pageSize - 1" ng-click="setCurrentPage(Math.ceil($parent.filtered.length/$parent.pageSize)-1)" id="navLastPage">&nbsp;&gt;&gt;&nbsp;</button>
+  <label> | Show: </label> <a ng-click="$parent.pageSize=10; setCurrentPage(0); updateCurrentPageSelector($parent.filtered.length)"
+    ng-style="$parent.pageSize == 10 && {'font-weight':'bold'}" style="cursor: pointer;" id="navPageSize10">10</a> <a
+    ng-click="$parent.pageSize=30; setCurrentPage(0); updateCurrentPageSelector($parent.filtered.length)" ng-style="$parent.pageSize == 30 && {'font-weight':'bold'}"
+    style="cursor: pointer;" id="navPageSize30">30</a> <a ng-click="$parent.pageSize=50; setCurrentPage(0); updateCurrentPageSelector($parent.filtered.length)"
+    ng-style="$parent.pageSize == 50 && {'font-weight':'bold'}" style="cursor: pointer;" id="navPageSize50">50</a> <a
+    ng-click="$parent.pageSize=100000; setCurrentPage(0); updateCurrentPageSelector($parent.filtered.length/$parent.pageSize)"
+    ng-style="$parent.pageSize == 100000 && {'font-weight':'bold'}" style="cursor: pointer;" id="navPageSizeAll">All</a>
+</div>
