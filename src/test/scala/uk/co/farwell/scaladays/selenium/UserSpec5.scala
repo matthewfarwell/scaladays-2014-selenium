@@ -27,7 +27,6 @@ class UserSpec5 extends CommonSelenium with Firefox {
     eventually {
       val tds = findAll(xpath("//tr//td[starts-with(@id, 'userUsername_')]")).map(_.text).toList
 
-      println("list=" + tds)
       tds.size should be(10)
     }
   }

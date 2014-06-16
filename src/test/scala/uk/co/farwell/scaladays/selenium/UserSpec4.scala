@@ -44,14 +44,10 @@ class UserSpec4 extends CommonSelenium with Firefox {
 
     val listBefore = Services.listUsers().unmarshall
 
-    println("listBefore=" + listBefore)
-
     click on "submit"
 
     eventually {
       val listAfter = Services.listUsers().unmarshall
-
-      println("listAfter =" + listAfter)
 
       listAfter.size should be(listBefore.size + 1)
 
