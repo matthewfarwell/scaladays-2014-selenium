@@ -2,7 +2,7 @@ package uk.co.farwell.scaladays.selenium
 
 import org.scalatest.selenium.Firefox
 
-class UserListSpec2 extends CommonSelenium with Firefox {
+class UserSpec2 extends CommonSelenium with Firefox {
   import Services._
 
   "slash" should "redirect to admin index.html - eventually" in {

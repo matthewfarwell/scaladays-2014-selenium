@@ -19,7 +19,7 @@ import org.scalatest.selenium.Firefox
 import org.scalatest.selenium.WebBrowser
 import org.scalatest.junit.JUnitRunner
 
-class UserListSpec3 extends CommonSelenium with Firefox {
+class UserSpec3 extends CommonSelenium with Firefox {
   "user" should "be able to edit another user" in {
     go to (baseUrl + "admin/index.html#/users")
 

@@ -6,11 +6,11 @@ import org.scalatest.selenium.Firefox
 import org.scalatest.junit.JUnitRunner
 
 @RunWith(classOf[JUnitRunner])
-class UserListFirefoxSpec extends UserListSpecBase with Firefox
+class UserSpecFirefox extends UserSpecBase with Firefox
 
-class UserListChromeSpec extends UserListSpecBase with Chrome
+class UserSpecChrome extends UserSpecBase with Chrome
 
-abstract class UserListSpecBase extends CommonSelenium {
+abstract class UserSpecBase extends CommonSelenium {
   it should "redirect to admin index.html - eventually" in {
     go to baseUrl
 
